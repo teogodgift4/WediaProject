@@ -1,0 +1,130 @@
+html, body{
+    margin:0;
+    padding:0;
+}
+
+.myheader{
+    position: relative;
+    padding-right: 10.56%;
+    padding-left: 10.56%;
+}
+
+.static_header{
+    background: #f6f6f6;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 10.56%;
+    padding-left: 10.56%;
+
+    a img{
+        position: absolute;
+        top:0;
+    }
+}
+
+.static_wrapper{
+    display: block;
+    margin: 0 auto;
+    text-align: right;
+
+    a{
+        margin-right: 13px;
+    }
+
+    .mysearch{
+        display: inline-block;
+
+        svg path{
+            fill:gray;
+        }
+    }
+
+    .link{
+        font-family: CFAstyPro;
+  font-size: 12.8px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  color:#4f4f4f;
+  text-decoration: none;
+    }
+}
+
+.navigation_wrapper{
+    text-align: right;
+
+    a{
+        margin-right: 37px;
+        font-family: CFAstyPro;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.21px;
+  color: #000;
+  text-decoration: none;
+    }
+
+    .donation{
+        display: inline-block;
+        margin-top: 41px;
+
+        .donationbutton{
+            margin: 0;
+            color:#f79d65 ;
+            padding: 15px 28px 12px 32px;
+            border: solid 2px #f79d65;
+        }
+    }
+}
+
+.title{
+    margin-top: 226px;
+    margin-bottom: 128px;
+}
+
+.title_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+        font-family: CFAstyPro;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.28;
+  letter-spacing: 0.32px;
+  color:#222222;
+  max-width: 560px;
+    }
+}
+
+.main_title{
+    margin: 0 0 15px;
+  font-family: CFAstyPro;
+  font-size: 48.8px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.63px;
+  color: #000;
+}
+
+.mytabs h2{
+    margin: 0 64px 15px 0;
+  font-family: CFAstyPro;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.26px;
+  color: #000;
+  display: inline-block;
+}
