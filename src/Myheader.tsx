@@ -1,6 +1,17 @@
 import React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 import Mynavigation from './Mynavigation'
 import Mytitle from './Mytitle'
+import Features from './Features';
+import Latest from './Latest';
+import Media from './Media';
+import Stories from './Stories';
+
 
 export default function Myheader() {
     return (
@@ -8,10 +19,29 @@ export default function Myheader() {
             <Mynavigation/>
             <Mytitle/>
             <div className="mytabs">
-                <h2>Features</h2>
-                <h2>Latest</h2>
-                <h2>In the Media Stories</h2>
-                <h2>Stories</h2>
+            <Router>
+              <Link to="/Features"><h2>Features</h2></Link>
+              <Link to="/Latest"><h2>Latest</h2></Link>
+              <Link to="/Media"> <h2>In the Media Stories</h2></Link>
+              <Link to="/Stories"><h2>Stories</h2></Link>
+              <Switch>
+          <Route exact path="/">
+            <Features />
+          </Route>
+          <Route exact path="/Features">
+            <Features />
+          </Route>
+          <Route path="/Latest">
+            <Latest />
+          </Route>
+          <Route exact path="/Media">
+            <Media />
+          </Route>
+          <Route path="/Stories">
+            <Stories />
+          </Route>
+            </Switch>
+        </Router>
             </div>
         </div>
     )
