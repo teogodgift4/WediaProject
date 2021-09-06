@@ -184,4 +184,18 @@ html, body {
   margin-bottom: 145px;
 }
 
+#searchButton {
+  border: none;
+  background: transparent;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  display: flex;
+  height: 40px;
+}
+
+.myinputs {
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.css.map */

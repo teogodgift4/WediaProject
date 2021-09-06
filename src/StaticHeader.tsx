@@ -1,5 +1,5 @@
 import React from 'react'
-import MySearch from './MySearch'
+import TheSearch from './TheSearch'
 
 export default function StaticHeader() {
     return (
@@ -10,7 +10,7 @@ export default function StaticHeader() {
                 <a href="#" className="link">Newsroom</a>
                 <a href="#" className="link">Contact us</a>
                 <a href="#" className="link">Visit ACG</a>
-                <MySearch/>
+                <TheSearch/>
             </div>
         </div>
     )
