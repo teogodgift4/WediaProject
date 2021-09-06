@@ -1,17 +1,34 @@
+import { title } from 'process';
+import { element, elementType } from 'prop-types';
+import Feature from './Feature';
 import React from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Features() {
-  async function fetchFeatures() {
-    const response = await fetch('https://www.cretalive.gr/api/news-feed?_format=json&page=0');
-    const features_list = await response.json();
-    return features_list;
-  }
-  fetchFeatures().then(features_list=>{
-      console.log(features_list)
-  })
+
+    const [data, setData] = useState<any>();
+
+    useEffect(()=>{
+            fetch('https://www.cretalive.gr/api/news-feed?_format=json&page=0')
+            .then(response => response.json())
+            .then(resjon => setData(resjon))
+          },[])
+          
+          console.log(data)
     return (
         <div>
-            <p>features component</p>
+            <ul className="thegrid">
+                {data && data.map((el: { image: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined, created: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined,title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; nnid: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => 
+                // <div>
+                // <div>{el.image}</div>
+                // <div>{el.created}</div>
+                // <div>{el.title}</div>
+                // </div>
+               
+                <Feature key={el.nnid} image={el.image} created={el.created} title={el.title} />
+              
+                )}
+                </ul>
         </div>
     )
 }

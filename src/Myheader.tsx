@@ -20,10 +20,12 @@ export default function Myheader() {
             <Mytitle/>
             <div className="mytabs">
             <Router>
+            <div className="mytabls_menu">
               <Link to="/Features"><h2>Features</h2></Link>
               <Link to="/Latest"><h2>Latest</h2></Link>
               <Link to="/Media"> <h2>In the Media Stories</h2></Link>
               <Link to="/Stories"><h2>Stories</h2></Link>
+              </div>
               <Switch>
           <Route exact path="/">
             <Features />
