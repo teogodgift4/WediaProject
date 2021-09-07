@@ -11,11 +11,13 @@ import Features from './Features';
 import Latest from './Latest';
 import Media from './Media';
 import Stories from './Stories';
+import Mobile from './Mobile';
 
 
 export default function Myheader() {
     return (
         <div className="myheader">
+          {/* <Mobile/> */}
             <Mynavigation/>
             <Mytitle/>
             <div className="mytabs">
